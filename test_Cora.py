@@ -2,7 +2,6 @@ import argparse
 import torch
 from torch_geometric.datasets import Planetoid
 from torch_geometric.transforms import RandomNodeSplit, Compose, GDC
-import optuna
 
 from experiments import run_experiments
 
@@ -26,7 +25,7 @@ def main():
     parser.add_argument('--batch_size', type=int, default=600)
     parser.add_argument('--runs', type=int, default=3)
     parser.add_argument('--eval_steps', type=int, default=1)
-    parser.add_argument('--cuda', type=int, default=2)
+    parser.add_argument('--cuda', type=int, default=0)
     args = parser.parse_args()
     print(args)
 
@@ -46,26 +45,6 @@ def main():
 
     print('============================================')
     print(args)
-
-
-    # def objective(trial):
-    #     # Define hyperparameters to tune
-    #     k1 = trial.suggest_int("k1", 0, 6)
-    #     k2 = trial.suggest_int("k2", 0, 6)
-    #     k3 = trial.suggest_int("k3", 0, 6)
-    #     gt_layers = trial.suggest_int("gt_layers", 1, 4)
-    #     lt_layers = trial.suggest_int("lt_layers", 1, 4)
-    #
-    #     acc = run_experiments(
-    #         data, k1, k2, k3, args.num_parts, gt_layers, lt_layers, args.num_heads, args.dropout, args.att_dropout,
-    #         args.lr, args.weight_decay, args.epochs, args.batch_size, args.runs, args.eval_steps, args.cuda, False)
-    #
-    #     return acc
-    #
-    # study = optuna.create_study(direction="maximize")
-    # study.optimize(objective, n_trials=300)
-    # best_params = study.best_params
-    # print("Best hyperparameters:", best_params)
 
 
 if __name__ == "__main__":
