@@ -17,12 +17,12 @@ If you need to apply BiFormer to other datasets, simply modify the dataset secti
 Please cite our work if you find it is useful for you:
 ```
 @article{
-  title = {},
-  author = {},
-  date = {},
-  journaltitle = {},
-  volume = {},
-  pages = {},
-  doi = {}
+  title = {BiFormer: A Bipartite-Stream Information Fusion Framework for Large-Scale Graph Representation Learning},
+  author = {Zhang, Qi and Sun, Yanfeng and Wang, Shaofan and Gao, Junbin and Yin, Baocai},
+  year = {2025},
+  journal = {Neural Networks},
+  volume = {191},
+  pages = {107792}
 }
+
 ```
