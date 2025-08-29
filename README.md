@@ -22,7 +22,7 @@ Please cite our work if you find it is useful for you:
   year = {2025},
   journal = {Neural Networks},
   volume = {191},
-  pages = {107792}
+  pages = {}
 }
 
 ```
